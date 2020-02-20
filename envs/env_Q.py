@@ -13,7 +13,7 @@ EPISODES = 2000
 
 image_in = cv2.imread("smile_test.png")           #import image           (form of every pixel  [255, 255, 255] or [0, 0, 0]
 
-image_out = np.ones( image_in.shape, np.uint8) * 255 #declaration  output image
+image_out = np.ones(image_in.shape, np.uint8) * 255 #declaration  output image
 image_in_array = np.zeros(image_in.shape)                   #declaration input array to have the image in another form (easier to work with)     black->1   white->0
 image_out_array = np.zeros(image_in.shape)                  #declaration output array to have the image in another form (easier to change the value of pixels)     black->1   white->0
 
@@ -117,12 +117,16 @@ class FooEnv(gym.Env):
 
 
   def reset(self):                  # 状態を初期化し、初期の観測値を返す
+
+
       return self.env.reset
 
   def render(self, close=False): # 環境を可視化する
       return self.env.render
 
   def close(self): # 環境を閉じて後処理をする
+
+
       return self.env.close()
 
   def seed(self, seed=None): # ランダムシードを固定する
